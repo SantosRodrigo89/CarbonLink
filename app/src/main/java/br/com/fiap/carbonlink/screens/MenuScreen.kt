@@ -62,6 +62,14 @@ fun MenuScreen(navController: NavHostController) {
             ) {
                 Text(text = "Logout", fontSize = 20.sp, color = Color.Blue)
             }
+            Spacer(modifier = Modifier.height(16.dp))
+            Button(
+                onClick = { navController.navigate("cadastrar") },
+                colors = ButtonDefaults.buttonColors(Color.White),
+                modifier = Modifier.size(width = 200.dp, height = 48.dp)
+            ) {
+                Text(text = "Cadastrar", fontSize = 20.sp, color = Color.Blue)
+            }
         }
     }
 }

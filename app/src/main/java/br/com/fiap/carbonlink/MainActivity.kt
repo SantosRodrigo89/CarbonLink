@@ -13,6 +13,7 @@ import androidx.navigation.compose.composable
 import androidx.navigation.compose.rememberNavController
 import br.com.fiap.carbonlink.screens.LoginScreen
 import br.com.fiap.carbonlink.screens.ProfileScreen
+import br.com.fiap.carbonlink.screens.SignUpScreen
 import br.com.fiap.carbonlink.screens.WalletScreen
 import br.com.fiap.carbonlink.ui.theme.CarbonLinkTheme
 
@@ -32,6 +33,7 @@ class MainActivity : ComponentActivity() {
                         composable(route = "carteira"){ WalletScreen(navController) }
                         composable(route = "perfil"){ ProfileScreen(navController) }
                         composable(route = "menu"){ MenuScreen(navController) }
+                        composable(route = "cadastrar"){ SignUpScreen(navController) }
                     }
                 }
             }
