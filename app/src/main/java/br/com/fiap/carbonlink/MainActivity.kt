@@ -1,6 +1,7 @@
 package br.com.fiap.carbonlink
 
 import MenuScreen
+import android.annotation.SuppressLint
 import android.os.Bundle
 import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
@@ -18,6 +19,7 @@ import br.com.fiap.carbonlink.screens.WalletScreen
 import br.com.fiap.carbonlink.ui.theme.CarbonLinkTheme
 
 class MainActivity : ComponentActivity() {
+    @SuppressLint("SuspiciousIndentation")
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContent {
