@@ -49,7 +49,7 @@ fun SignUpScreen(navController: NavHostController) {
     val confirmPasswordFieldValue = remember { mutableStateOf("") }
     val showPassword = remember { mutableStateOf(false) }
     val showConfirmPassword = remember { mutableStateOf(false) }
-    val xo  = remember { mutableStateOf(0) }
+    val selecionado  = remember { mutableStateOf(0) }
 
     Box(
         modifier = Modifier

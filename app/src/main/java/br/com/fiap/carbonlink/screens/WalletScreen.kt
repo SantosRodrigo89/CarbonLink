@@ -39,7 +39,7 @@ import br.com.fiap.carbonlink.R
 
 @SuppressLint("InvalidColorHexValue")
 @Composable
-fun WalletScreen(navController: NavController) {
+fun WalletScreen() {
     Box(modifier = Modifier
         .fillMaxSize()
         .background(Color.White)
