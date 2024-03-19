@@ -24,18 +24,17 @@ class MainActivity : ComponentActivity() {
         super.onCreate(savedInstanceState)
         setContent {
             CarbonLinkTheme {
-                // A surface container using the 'background' color from the theme
                 Surface(modifier = Modifier.fillMaxSize(), color = MaterialTheme.colorScheme.background) {
                   val navController = rememberNavController()
                     NavHost(
                         navController = navController,
                         startDestination = "login"
                     ){
-                        composable(route = "login"){ LoginScreen(navController)}
+                        composable(route = "login"){ LoginScreen(navController) }
                         composable(route = "carteira"){ WalletScreen(navController) }
+                        composable(route = "cadastrar"){ SignUpScreen(navController) }
                         composable(route = "perfil"){ ProfileScreen(navController) }
                         composable(route = "menu"){ MenuScreen(navController) }
-                        composable(route = "cadastrar"){ SignUpScreen(navController) }
                     }
                 }
             }

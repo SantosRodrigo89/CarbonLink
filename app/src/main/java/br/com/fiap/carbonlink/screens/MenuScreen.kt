@@ -39,13 +39,13 @@ fun MenuScreen(navController: NavHostController) {
                 .align(Alignment.Center)
         ) {
             Spacer(modifier = Modifier.height(80.dp))
-            Button(
-                onClick = { navController.navigate("perfil") },
-                colors = ButtonDefaults.buttonColors(Color.White),
-                modifier = Modifier.size(width = 200.dp, height = 48.dp)
-            ) {
-                Text(text = "Perfil", fontSize = 20.sp, color = Color.Blue)
-            }
+//            Button(
+//                onClick = { navController.navigate("perfil") },
+//                colors = ButtonDefaults.buttonColors(Color.White),
+//                modifier = Modifier.size(width = 200.dp, height = 48.dp)
+//            ) {
+//                Text(text = "Perfil", fontSize = 20.sp, color = Color.Blue)
+//            } TODO
             Spacer(modifier = Modifier.height(16.dp))
             Button(
                 onClick = { navController.navigate("carteira") },
@@ -61,14 +61,6 @@ fun MenuScreen(navController: NavHostController) {
                 modifier = Modifier.size(width = 200.dp, height = 48.dp)
             ) {
                 Text(text = "Logout", fontSize = 20.sp, color = Color.Blue)
-            }
-            Spacer(modifier = Modifier.height(16.dp))
-            Button(
-                onClick = { navController.navigate("cadastrar") },
-                colors = ButtonDefaults.buttonColors(Color.White),
-                modifier = Modifier.size(width = 200.dp, height = 48.dp)
-            ) {
-                Text(text = "Cadastrar", fontSize = 20.sp, color = Color.Blue)
             }
         }
     }

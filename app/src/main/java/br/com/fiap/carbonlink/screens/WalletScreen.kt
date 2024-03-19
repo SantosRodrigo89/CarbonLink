@@ -14,11 +14,9 @@ import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.size
-import androidx.compose.foundation.shape.RoundedCornerShape
-import androidx.compose.material.icons.Icons
-import androidx.compose.material.icons.outlined.Notifications
+import androidx.compose.material3.Button
+import androidx.compose.material3.ButtonDefaults
 import androidx.compose.material3.CardDefaults
-import androidx.compose.material3.Icon
 import androidx.compose.material3.OutlinedCard
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
@@ -34,11 +32,12 @@ import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
+import androidx.navigation.NavHostController
 import br.com.fiap.carbonlink.R
 
 @SuppressLint("InvalidColorHexValue")
 @Composable
-fun WalletScreen() {
+fun WalletScreen(navController: NavHostController) {
     Box(modifier = Modifier
         .fillMaxSize()
         .background(Color.White)
@@ -62,16 +61,17 @@ fun WalletScreen() {
                     color = colorResource(id = R.color.verde_app)
                 )
                 Spacer(modifier = Modifier.weight(1f))
-                Icon(
-                    Icons.Outlined.Notifications,
-                    contentDescription = "Notificação",
-                    Modifier
-                        .size(40.dp)
-                        .background(
-                            color = Color.LightGray,
-                            shape = RoundedCornerShape(50.dp)
-                        )
-                )
+                Button(
+                    onClick = { navController.navigate("login") },
+                    colors = ButtonDefaults.buttonColors(Color.Transparent),
+                ) {
+                    Image(
+                        painter = painterResource(id = R.drawable.logout),
+                        contentDescription = "logo",
+                        modifier = Modifier.size(30.dp),
+                        contentScale = ContentScale.Fit
+                    )
+                }
             }
             Spacer(modifier = Modifier.height(16.dp))
             OutlinedCard(
@@ -79,7 +79,7 @@ fun WalletScreen() {
                     containerColor = colorResource(id = R.color.verde_card)
                 ),
                 border = BorderStroke(1.dp, Color.Transparent),
-                elevation = CardDefaults.cardElevation(4.dp) ,
+                elevation = CardDefaults.cardElevation(4.dp),
                 modifier = Modifier
                     .fillMaxWidth()
             ) {
@@ -138,7 +138,7 @@ fun WalletScreen() {
             Spacer(modifier = Modifier.height(24.dp))
             OutlinedCard(
                 border = BorderStroke(1.dp, Color.Transparent),
-                elevation = CardDefaults.cardElevation(2.dp) ,
+                elevation = CardDefaults.cardElevation(2.dp),
                 modifier = Modifier
                     .fillMaxWidth(),
             ) {
@@ -176,7 +176,7 @@ fun WalletScreen() {
             Spacer(modifier = Modifier.height(24.dp))
             OutlinedCard(
                 border = BorderStroke(1.dp, Color.Transparent),
-                elevation = CardDefaults.cardElevation(2.dp) ,
+                elevation = CardDefaults.cardElevation(2.dp),
                 modifier = Modifier
                     .fillMaxWidth(),
             ) {
@@ -195,17 +195,57 @@ fun WalletScreen() {
                     ),
                     textAlign = TextAlign.Center
                 )
+                Row(
+                    verticalAlignment = Alignment.CenterVertically,
+                    modifier = Modifier.fillMaxWidth(),
+                ) {
+                    Text(
+                        text = "Kraft Heinz",
+                        modifier = Modifier
+                            .padding(16.dp, 16.dp, 0.dp, 4.dp),
+                        style = TextStyle(
+                            fontFamily = FontFamily.Monospace,
+                            fontSize = 12.sp,
+                            fontWeight = FontWeight.Bold,
+                            lineHeight = 8.sp,
+                            letterSpacing = 0.sp,
+                            textAlign = TextAlign.Left,
+                            color = Color(0xFF40513B)
+                        ),
+                        textAlign = TextAlign.Center
+                    )
+                    Text(
+                        text = "+74.745247,84",
+                        modifier = Modifier
+                            .padding(16.dp, 16.dp, 0.dp, 4.dp),
+                        style = TextStyle(
+                            fontFamily = FontFamily.Monospace,
+                            fontSize = 12.sp,
+                            fontWeight = FontWeight.Bold,
+                            lineHeight = 8.sp,
+                            letterSpacing = 0.sp,
+                            textAlign = TextAlign.Left,
+                            color = Color(0xFF40513B)
+                        ),
+                        textAlign = TextAlign.Center
+                    )
+                }
+                Text(
+                    text = "22 Fev 2024, 14:52",
+                    modifier = Modifier
+                        .padding(16.dp, 16.dp, 0.dp, 4.dp),
+                    style = TextStyle(
+                        fontFamily = FontFamily.Monospace,
+                        fontSize = 12.sp,
+                        fontWeight = FontWeight.Bold,
+                        lineHeight = 8.sp,
+                        letterSpacing = 0.sp,
+                        textAlign = TextAlign.Left,
+                        color = Color(0xFF40513B)
+                    ),
+                )
             }
         }
-//        Spacer(modifier = Modifier.height(24.dp))
-//        Button(
-//            onClick = { navController.navigate("menu") },
-//            colors = ButtonDefaults.buttonColors(Color.Gray),
-//            modifier = Modifier
-//                .align(Alignment.Center)
-//        ) {
-//            Text(text = "VOLTAR", fontSize = 20.sp, color = Color.Blue)
-//        }
     }
 }
 

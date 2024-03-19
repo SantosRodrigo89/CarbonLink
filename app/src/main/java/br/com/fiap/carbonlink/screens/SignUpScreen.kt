@@ -183,7 +183,7 @@ fun SignUpScreen(navController: NavHostController) {
             }
             Spacer(modifier = Modifier.height(16.dp))
             Button(
-                onClick = { navController.navigate("menu") },
+                onClick = { navController.navigate("carteira") },
                 colors = ButtonDefaults.buttonColors(Color(0xFF40513B)),
                 modifier = Modifier
                     .fillMaxWidth()
