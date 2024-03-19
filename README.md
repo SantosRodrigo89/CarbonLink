@@ -18,7 +18,7 @@ A Elocarbon é uma plataforma que simplifica a gestão de projetos de captação
 
 ### MVP Disponível 
 
-https://github.com/SantosRodrigo89/CarbonLink/assets/93896739/e2b7fa3c-81a8-47c6-9bc4-ca50a091a5ee
+https://github.com/SantosRodrigo89/EloCarbon/assets/93896739/0034b543-6322-4386-b4c9-f0c9edabf903
 
 ### Objetivos Financeiros
 
@@ -36,7 +36,7 @@ Se você está interessado em contribuir para o projeto Elocarbon, temos várias
 ### Contato
 
 Estamos entusiasmados para levar adiante esse projeto e contribuir para um futuro mais verde e sustentável. Se você tiver alguma dúvida ou quiser se envolver, entre em contato conosco em [contato@elocarbon.com](mailto:contato@elocarbon.com).
-
+  
 Junte-se a nós nessa jornada para um futuro mais sustentável!
 
 ---
