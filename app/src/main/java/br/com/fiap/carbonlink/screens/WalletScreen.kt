@@ -68,7 +68,7 @@ fun WalletScreen(navController: NavHostController) {
                     Image(
                         painter = painterResource(id = R.drawable.logout),
                         contentDescription = "logo",
-                        modifier = Modifier.size(30.dp),
+                        modifier = Modifier.size(32.dp),
                         contentScale = ContentScale.Fit
                     )
                 }

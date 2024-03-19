@@ -4,6 +4,7 @@ import androidx.compose.foundation.Image
 import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
+import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.Spacer
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.fillMaxWidth
@@ -60,17 +61,16 @@ fun LoginScreen(navController: NavController) {
                 Text(text = "Login", fontSize = 20.sp, color = Color.White)
             }
             Spacer(modifier = Modifier.height(16.dp))
-            Button(
-                onClick = { navController.navigate("cadastrar") },
-                colors = ButtonDefaults.buttonColors(Color(0xFF40513B)),
-                modifier = Modifier
-                    .fillMaxWidth()
-                    .height(48.dp)
-            ) {
-                Text(text = "Cadastrar", fontSize = 20.sp, color = Color.White)
+            Row( verticalAlignment = Alignment.CenterVertically ) {
+                Text(text = "Não possui conta ?")
+                Button(
+                    onClick = { navController.navigate("cadastrar") },
+                    colors = ButtonDefaults.buttonColors(Color.Transparent)
+                ) {
+                    Text(text = "Clique aqui", fontSize = 16.sp, color = Color(0xFF40513B))
+                }
             }
         }
-
     }
 }
 
